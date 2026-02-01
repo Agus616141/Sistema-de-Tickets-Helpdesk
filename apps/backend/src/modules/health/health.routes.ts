@@ -1,14 +1,9 @@
 import { Router } from "express";
+import { health } from "./health.controller.js";
 
 const router = Router();
 
-router.get("/", (_req, res) => {
-
-        res.json({ 
-            ok: true,
-            ts: Date.now(),
-        });
-    });
+router.get("/", health);
 
 export default router;
 
